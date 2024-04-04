@@ -53,12 +53,19 @@ label {
     box-sizing: border-box;
 }
 
-.login {
+.LR_Block span:first-of-type {
     font-weight: 500;
     font-size: 20px;
     line-height: 80%;
     color: #3d3d3d;
 }
+
+/*.login {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 80%;
+    color: #3d3d3d;
+}*/
 
 .separator {
     color: #3d3d3d;
