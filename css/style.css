@@ -1,4 +1,5 @@
-/* Implementing Font Family - Cera PRO*/
+/* Implementing Font Family - Cera PRO */
+/* =================================== */
 @font-face {
     font-family: "Cera Pro";
     src: url(/fonts/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-regular.otf);
@@ -7,6 +8,7 @@
 }
 
 /* Using Globals */
+/* ============= */
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +27,7 @@ label {
 }
 
 /* Global Container */
+/* ================ */
 .global_container {
     max-width: 500px;
     background-color: #fff;
@@ -34,18 +37,21 @@ label {
 }
 
 /* Inner Container */
+/* =============== */
 .inner_container {
     box-sizing: border-box;
     padding: 38px 100px 50px 100px;
 }
 
 /* Close Window */
+/* ============ */
 .close_window {
     text-align: right;
     display: block;
 }
 
-/* Login-Register Block */ 
+/* Login-Register Block */
+/* ==================== */ 
 .LR_Block {
     width: 200px;
     margin: auto;
@@ -60,25 +66,19 @@ label {
     line-height: 80%;
     color: #3d3d3d;
 }
-
-/*.login {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 80%;
+.LR_Block span:nth-child(2) {
     color: #3d3d3d;
-}*/
-
-.separator {
-    color: #3d3d3d;
+    font-family: "Cera Pro";
     font-size: 18px;
     padding: 0 12px;
 }
-
-.register {
+.LR_Block span:last-of-type {
+    font-size: 20px;
     color: #46a358;
 }
 
 /* Invitation Text */
+/* =============== */
 .invitation_text {
     color: #3d3d3d;
     max-width: 300px;
@@ -90,9 +90,14 @@ label {
 }
 
 /* Form */
+/* ==== */
 .form_content {
     width: 300px;
     color: #a5a5a5;
+}
+
+.form_content label span {
+    color: green;
 }
 
 .form_input_wrapper {
@@ -133,6 +138,7 @@ label {
 }
 
 /* Registration with... */
+/* ==================== */
 .reg_with {
     font-weight: 400;
     font-size: 13px;
@@ -147,8 +153,9 @@ label {
 }
 
 .links_socials {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     border: 1px solid #a5a5a5;
     border-radius: 5px;
