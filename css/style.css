@@ -1,62 +1,63 @@
 /* ===== GreenShop project styles ===== */
+/* ==================================== */
+
 @font-face {
-    font-family: Cera Pro;
-        src: url(/fonts/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-regular.otf);
-        /*src: url(/fonts/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-black.otf);
-        src: url(/fonts/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-bold.otf);
-        src: url(/fonts/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-medium.otf);*/
-    font-weight: 400, 500, 600, 700, 800;    
+    font-family: 'cera_proregular';
+    src: url('../fonts/cerapro-regular-webfont.eot');
+    src: url('../fonts/cerapro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-regular-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-regular-webfont.woff') format('woff'),
+         url('../fonts/cerapro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-regular-webfont.svg#cera_proregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* ===== Globals ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'cera_problack';
+    src: url('../fonts/cerapro-black-webfont.eot');
+    src: url('../fonts/cerapro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cerapro-black-webfont.woff2') format('woff2'),
+         url('../fonts/cerapro-black-webfont.woff') format('woff'),
+         url('../fonts/cerapro-black-webfont.ttf') format('truetype'),
+         url('../fonts/cerapro-black-webfont.svg#cera_problack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 /* ===== Content Wrapper ===== */
 .wrapper {
-    max-width: 1211px;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.inner_wrapper {
+    margin: 0 auto;
+    width: 100%;
     border-bottom: 1px solid #46a35850;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
 }
 
 /* ===== Header ===== */
 header {
-    padding-top: 30px;
+    padding-top: 25px;
     margin-bottom: 12px;
 }
-
-/*header .logo {
-    margin-right: 229px;
-}*/
-
-/*header .login_btn {
-    margin-left: 370px;
-}*/
 
 header nav, header nav li, header .logo {
     display: inline-block;
 }
-
-header ul {
-    list-style: none;
-}
-
 header nav li {
     margin-right: 50px;
 }
-
 header nav li:last-of-type {
     margin-right: 0px;
 }
-
 header nav li a {
-    text-decoration: none;
-    font-family: Cera Pro;
+    font-family: 'cera_proregular';
     font-size: 16px;
     font-weight: 400;
     color: #3d3d3d;
@@ -71,46 +72,44 @@ header nav li:after {
     margin-top: 22px;
     transition: 0.5s;
 }
-
 header nav li:hover::after {
     background-color: #46a358;
 }
 
-a .login_btn::before {
-    background-image: url(/img/Login_btn_Header.svg);
+a .btn_login::before {
+    background-image: url(/img/_svg/Login_btn_Header.svg);
     content: "";
     display: block;
 }
-
-.login_btn {
+.btn_login {
     background-color: #46a358;
-    text-decoration: none;
-    font-family: Cera Pro;
-    font-weight: 500;
-    font-size: 16px;
     color: #fff;
-    border-radius: 6px;
-    padding: 8px 17px;
+    max-height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 8px 17px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'cera_proregular';
 }
 
 /* ===== Banner ===== */
-.greenshop_banner article{
+.gs_banner {
+    margin-bottom: 26px;
+}
+.gs_banner article{
     max-width: 557px;
     display: inline-block;
     margin: 68px 93px 85px 43px;
 }
-
-.greenshop_banner .wrapper {
-    border: 0;
+.gs_banner .wrapper {
     background: linear-gradient(135deg, #f5f5f5 0%, #f5f5f5 100%);
     min-height: 450px;
 }
-
 .wrapper h4 {
-    font-family: "Cera Pro", serif;
+    font-family: 'cera_proregular';
     font-weight: 500;
     font-size: 14px;
     line-height: 114%;
@@ -120,7 +119,7 @@ a .login_btn::before {
     margin-bottom: 7px;
 }
 .wrapper h1 {
-    font-family: "Cera Pro", serif;
+    font-family: 'cera_problack';
     font-weight: 900;
     font-size: 70px;
     line-height: 100%;
@@ -130,26 +129,45 @@ a .login_btn::before {
 }
 .wrapper h1 span {
     color: #46a358;
-} 
-
+}
 .offer_desc {
-    font-family: "Cera Pro", serif;
+    font-family: 'cera_proregular';
     font-weight: 400;
     font-size: 14px;
     line-height: 171%;
     color: #727272;
     margin-bottom: 44px;
 }
-
 .btn {
     text-transform: uppercase;
     color: #fff;
     background-color: #46a358;
-    font-family: Cera Pro;
+    font-family: 'cera_proregular';
     font-weight: 700;
     font-size: 16px;
     line-height: 125%;
     text-decoration: none;
     padding: 10px 26px;
     border-radius: 6px;
+}
+
+/* ===== Catalog Sidebar ===== */
+.gs_sidebar {
+    width: 310px;
+    background-color: #fbfbfb;
+    display: block;
+}
+.gs_sidebar div {
+    margin: 14px 0 0 18px;
+    max-width: 103px;
+}
+.gs_sidebar div p {
+    font-family: 'cera_proregular';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+}
+.gs_sidebar div ul {
+    margin: 23px 0 0 12px;
 }
