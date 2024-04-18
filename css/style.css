@@ -99,15 +99,18 @@ a .btn_login::before {
 .gs_banner {
     margin-bottom: 26px;
 }
+
 .gs_banner article{
     max-width: 557px;
     display: inline-block;
     margin: 68px 93px 85px 43px;
 }
+
 .gs_banner .wrapper {
     background: linear-gradient(135deg, #f5f5f5 0%, #f5f5f5 100%);
     min-height: 450px;
 }
+
 .wrapper h4 {
     font-family: 'cera_proregular';
     font-weight: 500;
@@ -118,6 +121,7 @@ a .btn_login::before {
     color: #3d3d3d;
     margin-bottom: 7px;
 }
+
 .wrapper h1 {
     font-family: 'cera_problack';
     font-weight: 900;
@@ -127,9 +131,11 @@ a .btn_login::before {
     color: #3d3d3d;
     margin-bottom: 5px;
 }
+
 .wrapper h1 span {
     color: #46a358;
 }
+
 .offer_desc {
     font-family: 'cera_proregular';
     font-weight: 400;
@@ -138,6 +144,7 @@ a .btn_login::before {
     color: #727272;
     margin-bottom: 44px;
 }
+
 .btn {
     text-transform: uppercase;
     color: #fff;
@@ -153,14 +160,16 @@ a .btn_login::before {
 
 /* ===== Catalog Sidebar ===== */
 .gs_sidebar {
-    width: 310px;
+    max-width: 310px;
     background-color: #fbfbfb;
     display: block;
 }
+
 .gs_sidebar div {
-    margin: 14px 0 0 18px;
+    margin: 14px 0 377px 18px;
     max-width: 103px;
 }
+
 .gs_sidebar div p {
     font-family: 'cera_proregular';
     font-weight: 700;
@@ -168,6 +177,194 @@ a .btn_login::before {
     line-height: 89%;
     color: #3d3d3d;
 }
+
 .gs_sidebar div ul {
     margin: 23px 0 0 12px;
+}
+
+.gs_sidebar ul li {
+    font-family: 'cera_proregular';
+    font-size: 15px;
+    line-height: 267%;
+}
+
+.gs_sidebar ul li a:hover {
+    font-weight: 700;
+    color: #46a358;
+}
+
+.gs_catalog_desc {
+    max-width: 840px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gs_catalog_minimenu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
+
+.gs_catalog_minimenu li {
+    margin-right: 40px;
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+}
+
+.gs_catalog_minimenu li:last-of-type {
+    margin-right: 0px;
+}
+
+.gs_catalog_minimenu nav li::after {
+    height: 2px;
+    background-color: transparent;
+    width: 100%;
+    content: "";
+    display: block;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.gs_catalog_minimenu nav li:hover {
+    font-weight: 700;
+    color: #46a358;
+}
+
+.gs_catalog_minimenu nav li:hover::after {
+    background-color: #46a358;
+}
+
+.gs_catalog_minimenu span {
+    font-family: 'cera_proregular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 107%;
+    color: #3d3d3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section nav, section nav li {
+    display: inline-block;
+}
+
+.gs_catalog_cards_viewport {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+    margin-bottom: 90px;
+}
+
+/* ===== Product Card ===== */
+.gs_catalog_cards_viewport .product_card {
+    max-width: 258px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product_card__image {
+    background-color: #fbfbfb;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.product_card h3 {
+    font-family: 'cera_proregular';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #3d3d3d;
+    margin-bottom: 6px;
+}
+
+.product_card p {
+    font-family: 'cera_proregular';
+    font-size: 12px;
+    color: #727272;
+    margin-bottom: 12px;
+}
+
+.product_card div {
+    margin-bottom: 8px;
+}
+
+.product_card__rating {
+    max-width: 12px;
+}
+
+.product_card__price {
+    font-family: 'cera_proregular';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 89%;
+    color: #46a358;
+    margin-bottom: 16px;
+}
+
+/*.product_card__confirm {
+    font-family: 'cera_proregular';
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #46a358;
+    text-transform: uppercase;
+    border: 0px;
+    border-radius: 8px;
+    padding: 8px 0;
+    max-width: 66.6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+/* ===== Paggination ===== */
+.paggination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.paggination ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.paggination ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    height: 35px;
+}
+
+.paggination li a {
+    font-family: 'cera_proregular';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 89%;
+    color: #3d3d3d;
+    padding: 10px;
+    width: 35px;
+    text-align: center;
+}
+
+.paggination ul li:last-of-type {
+    margin-right: 0;
+}
+
+.paggination li:hover, .paggination ul li a:hover {
+    background-color: #46a358;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
 }
