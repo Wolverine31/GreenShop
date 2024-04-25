@@ -281,9 +281,25 @@ section nav, section nav li {
     border-top: 1px solid transparent;
 }
 
+/* ===== Visiability of mini-icons on Product Card START ===== */
 .product_card:hover {
     border-top: #46a358 1px solid;
 }
+.product_card:hover .product_card__cart_fav_search {
+    opacity: 1;
+}
+.product_card .product_card__cart_fav_search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 272px;
+    width: 125px;
+    opacity: 0;
+    transition: 0.3s;
+    left: calc(50% - 62.5px);
+}
+/* ====== Visiability of mini-icons on Product Card END ===== */
 
 .discount {
     position: absolute;
@@ -297,30 +313,6 @@ section nav, section nav li {
     line-height: 100%;
     text-transform: uppercase;
     padding: 7px 8px;
-}
-
-.product_card__cart_fav_search {
-    position: absolute;
-    top: 258px;
-    width: 125px;
-    text-align: center;
-    left: calc(50% - 62.5px);
-    margin: 7px;    
-}
-
-.product_card__cart_fav_search ul li {
-    display: inline-block;
-    margin-right: 26px;
-    opacity: 0;
-}
-
-.product_card__cart_fav_search li:hover {
-    opacity: 1;
-    transition: 0.3;
-}
-
-.product_card__cart_fav_search ul li:last-of-type {
-    margin-right: 0px;
 }
 
 .product_card__image {
@@ -390,6 +382,10 @@ section nav, section nav li {
     align-items: center;
 }*/
 
+.product_card__cart_fav_search a:hover svg path {
+    fill: #46a358!important;
+} 
+
 /* ===== Paggination ===== */
 .paggination {
     display: flex;
@@ -419,7 +415,7 @@ section nav, section nav li {
     font-size: 18px;
     line-height: 89%;
     color: #3d3d3d;
-    padding: 10px;
+    /*padding: 10px;*/
     width: 35px;
     text-align: center;
 }
@@ -427,6 +423,20 @@ section nav, section nav li {
 .paggination ul li:last-of-type {
     margin-right: 0;
 }
+/*.paggination ul li:last-of-type a::after {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/svg/paggination_arrow_right.svg);
+}*/
+
+.paggination ul li:last-of-type:hover a svg path {
+    stroke: white !important;
+}
+/*.paggination ul li:last-of-type a:hover {
+    stroke: #fff;
+}*/
 
 .paggination li:hover, .paggination ul li a:hover {
     background-color: #46a358;
