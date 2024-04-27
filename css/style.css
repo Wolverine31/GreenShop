@@ -23,7 +23,6 @@
          url('../fonts/cerapro-black-webfont.svg#cera_problack') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /* ===== Content Wrapper ===== */
@@ -49,6 +48,7 @@ header {
 
 header nav, header nav li, header .logo {
     display: inline-block;
+    position: relative;
 }
 header nav li {
     margin-right: 50px;
@@ -75,6 +75,60 @@ header nav li:after {
 header nav li:hover::after {
     background-color: #46a358;
 }
+
+/* ===== Header Drop ===== */
+    /* === Nav Dropdown Menu === */
+        header nav .drop .dropdown_main {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 58px;
+            right: -124px;
+            background: #edf6ee;
+            font-family: "Encode Sans Expanded", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #3d3d3d;
+            opacity: 0;
+            height: 0px; /* Here we make dropdown transparent bg */
+        }
+
+        header nav .drop:hover .dropdown_main {
+            opacity: 1;
+            height: 200px;
+        }
+
+        .drop div {
+            position: absolute;
+            top: 0;
+            padding-top: 37px;
+        }
+
+        .dropdown_main li {
+            position: relative;
+            margin-right: 0px;
+            min-width: 188px;
+            padding: 7px 14px;
+        }
+        
+        .dropdown_main li:after {
+            margin-top: 8px;
+        }
+
+        .dropdown_sup {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            right: -188px;
+            background: #edf6ee;
+            font-family: "Encode Sans Expanded", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            color: #3d3d3d;
+        }
+
+    /* === Nav Dropdown Menu END === */
+/* ===== Header Drop END ===== */
 
 a .btn_login::before {
     background-image: url(/img/svg/Login_btn_Header.svg);
