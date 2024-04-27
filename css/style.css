@@ -120,11 +120,17 @@ header nav li:hover::after {
             display: flex;
             flex-direction: column;
             right: -188px;
+            top: -135px;
             background: #edf6ee;
             font-family: "Encode Sans Expanded", sans-serif;
             font-weight: 400;
             font-size: 16px;
             color: #3d3d3d;
+            opacity: 0;
+        }
+
+        .dropdown_main li:last-of-type:hover .dropdown_sup {
+            opacity: 1;
         }
 
     /* === Nav Dropdown Menu END === */
