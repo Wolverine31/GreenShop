@@ -76,65 +76,80 @@ header nav li:hover::after {
     background-color: #46a358;
 }
 
-/* ===== Header Drop ===== */
-    /* === Nav Dropdown Menu === */
-        header nav .drop .dropdown_main {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            top: 58px;
-            right: -124px;
-            background: #edf6ee;
-            font-family: "Encode Sans Expanded", sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            color: #3d3d3d;
-            opacity: 0;
-            height: 0px; /* Here we make dropdown transparent bg */
-        }
+header nav ul li.drop {
+    position: relative;
+}
 
-        header nav .drop:hover .dropdown_main {
-            opacity: 1;
-            height: 200px;
-        }
+header nav ul .dropdown_main {
+    display: block;
+    position: absolute;
+    background-color: #edf6ee;
+    top: 58px;
+    right: -50px;
+    height: 0;
+    opacity: 0;
+}
 
-        .drop div {
-            position: absolute;
-            top: 0;
-            padding-top: 37px;
-        }
+header nav ul li.drop:hover .dropdown_main {
+    opacity: 1;
+    height: auto;
+    /*transition: 0.8s;*/
+}
 
-        .dropdown_main li {
-            position: relative;
-            margin-right: 0px;
-            min-width: 188px;
-            padding: 7px 14px;
-        }
-        
-        .dropdown_main li:after {
-            margin-top: 8px;
-        }
+.dropdown_main li {
+    padding: 8px 14px;
+    margin-right: 0px;
+    min-width: 188px;
+}
 
-        .dropdown_sup {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            right: -188px;
-            top: -135px;
-            background: #edf6ee;
-            font-family: "Encode Sans Expanded", sans-serif;
-            font-weight: 400;
-            font-size: 16px;
-            color: #3d3d3d;
-            opacity: 0;
-        }
+.dropdown_main li:hover {
+    background-color: #1a712a;
+}
 
-        .dropdown_main li:last-of-type:hover .dropdown_sup {
-            opacity: 1;
-        }
+.dropdown_main li::after {
+    height: 0px;
+    /*background-color: transparent;*/
+    width: 0%;
+    content: "";
+    display: block;
+    margin-top: 0px;
+    transition: 0.5s;
+    background-color: none;
+}
 
-    /* === Nav Dropdown Menu END === */
-/* ===== Header Drop END ===== */
+header nav ul .dropdown_main li {
+    display: block;
+}
+
+.dropdown_sup {
+    position: absolute;
+    background-color: #edf6ee;
+    top: -108px;
+    right: -188px;
+    opacity: 0;
+}
+
+li.d_sup:hover .dropdown_sup {
+    opacity: 1;
+    height: auto;
+}
+
+.d_sup a img {
+    position: absolute;
+    right: 18px;
+    top: 10px;
+}
+
+/* Перепрописал как было в переписке. Не работает. Второе меню, все авно красится в белый цвет, хотя без
+наведения должен быть черный!!! */
+.dropdown_main li a, .d_sup .dropdown_sup li a {
+    color: #3d3d3d;
+}
+.dropdown_main li:hover a, .d_sup .dropdown_sup li:hover a {
+    color: #fff;
+}
+
+
 
 a .btn_login::before {
     background-image: url(/img/svg/Login_btn_Header.svg);
