@@ -196,6 +196,29 @@ a .btn_login::before {
     min-height: 450px;
 }
 
+.gs_banner .wrapper img {
+    animation: appearence 3s /*cubic-bezier(.17, .67, .87, .48)*/ ease-in-out 3s infinite;
+}
+@keyframes appearence {
+    0% {opacity: 0;}
+    50% {opacity: 0.5;}
+    100% {opacity: 1;}
+}
+.gs_banner .wrapper article span {
+    animation: bounce 5s ease-in-out 3s infinite;
+}
+@keyframes bounce {
+    0% {
+        opacity: 0;
+        color: #727272;
+        box-shadow: 8px 8px 8px;
+    }
+    100% {
+        opacity: 1;
+        box-shadow: 12px 12px 12px;
+    }
+}
+
 .wrapper h4 {
     font-family: 'cera_proregular';
     font-weight: 500;
