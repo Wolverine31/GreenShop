@@ -50,6 +50,16 @@ header nav, header nav li, header .logo {
     display: inline-block;
     position: relative;
 }
+
+.logo {
+    transition: 0.5s;
+}
+
+.logo:hover {
+    box-shadow: 10px 10px 10px #46a35825;
+    transition: 0.5s;
+}
+
 header nav li {
     margin-right: 50px;
 }
@@ -231,6 +241,13 @@ a .btn_login::before {
     text-decoration: none;
     padding: 10px 26px;
     border-radius: 6px;
+    transition: 1s;
+}
+.btn:hover {
+    transition: 1s;
+    box-shadow: 12px 12px 12px #46a35850;
+    background-color: #eb820a;
+    color: #3d3d3d;
 }
 
 /* ===== Catalog Sidebar ===== */
@@ -388,6 +405,14 @@ section nav, section nav li {
     line-height: 100%;
     text-transform: uppercase;
     padding: 7px 8px;
+    transition: 1s;
+}
+.product_card:hover .discount {
+    transition: 1s;
+    background-color: #eb820a;
+    color: #3d3d3d;
+    font-weight: 700;
+    transform: scale(2)
 }
 
 .product_card__image {
