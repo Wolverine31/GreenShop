@@ -832,19 +832,19 @@ section nav, section nav li {
 } 
 
 .location::before {
-    content: url(/img/svg/footer__gradient_location.svg);
+    content: url(img/svg/footer__gradient_location.svg);
     display: inline-block;
     background-repeat: no-repeat;
     margin-right: 9px;    
 }
 .contact::before {
-    content: url(/img/svg/footer__gradient_message.svg);
+    content: url(img/svg/footer__gradient_message.svg);
     display: inline-block;
     background-repeat: no-repeat;
     margin-right: 9px;
 }
 .call::before {
-    content: url(/img/svg/footer__gradient_call.svg);
+    content: url(img/svg/footer__gradient_call.svg);
     display: inline-block;
     background-repeat: no-repeat;
     margin-right: 9px;
