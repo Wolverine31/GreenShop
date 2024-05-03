@@ -196,14 +196,14 @@ a .btn_login::before {
     min-height: 450px;
 }
 
-.gs_banner .wrapper img {
-    animation: appearence 3s /*cubic-bezier(.17, .67, .87, .48)*/ ease-in-out 3s infinite;
+/*.gs_banner .wrapper img {
+    animation: appearence 3s cubic-bezier(.17, .67, .87, .48) ease-in-out 3s infinite;
 }
 @keyframes appearence {
     0% {opacity: 0;}
     50% {opacity: 0.5;}
     100% {opacity: 1;}
-}
+}*/
 .gs_banner .wrapper article span {
     animation: bounce 5s ease-in-out 3s infinite;
 }
@@ -211,11 +211,11 @@ a .btn_login::before {
     0% {
         opacity: 0;
         color: #727272;
-        box-shadow: 8px 8px 8px;
+        
     }
     100% {
         opacity: 1;
-        box-shadow: 12px 12px 12px;
+        
     }
 }
 
@@ -545,14 +545,28 @@ section nav, section nav li {
 
 .paggination ul li:last-of-type {
     margin-right: 0;
+    animation: moveright 4s ease infinite;
+    position: relative;
 }
-/*.paggination ul li:last-of-type a::after {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    background-image: url(../img/svg/paggination_arrow_right.svg);
-}*/
+@keyframes moveright {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 10px;
+    }
+    50% {
+        left: 20px;
+    }
+    75% {
+        left: 30px;
+    }
+    100% {
+        left: 0px;
+        box-shadow: #1a712a50 10px 10px 10px;
+    }
+}
+
 
 .paggination ul li:last-of-type:hover a svg path {
     stroke: white !important;
@@ -959,3 +973,58 @@ section nav, section nav li {
     line-height: 214%;
     color: #3d3d3d;
 }
+
+/* ===== Preloader ===== */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #33333370;
+    z-index: 999;
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none; /* Это не будет работать */
+    }
+  }
+  
+  .preloader {
+    /* Другие стили вашего прелоадера */
+    animation: fadeOut 5s forwards; /* Применяем анимацию к прелоадеру */
+  }
+  
+.loader {
+    border: 16px solid #333333;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 5s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -60px;
+    margin-left: -60px;
+        
+}
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+    
+    100% {
+      transform: rotate(360deg);
+      opacity: 0;
+      display: none;
+    }
+  }
+  
