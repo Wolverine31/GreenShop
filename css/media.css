@@ -1,0 +1,203 @@
+@media only screen and (max-width: 1200px) {
+    header .wrapper {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .gs_banner .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    .gs_banner .wrapper img {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* === 992 PX Start === */
+@media only screen and (max-width: 992px) {
+    .gs_banner .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 300px;
+    }
+    .gs_banner .wrapper img {
+        width: 300px;
+        height: 260px;
+    }
+    .gs_banner article {
+        margin: 24px;
+        max-width: 580px;
+    }
+    .gs_banner article h4 {
+        font-size: 12px;
+        letter-spacing: normal;
+        margin-bottom: 20px;
+    }
+    .gs_banner article h1 {
+        font-size: 40px;
+    }
+    .gs_banner .offer_desc {
+        font-size: 12px;
+    }
+    .gs_sidebar {
+        min-width: 200px;
+    }
+    .gs_sidebar div p {
+        font-size: 16px;
+    }
+    .gs_sidebar ul li {
+        font-size: 14px;
+        line-height: 200%;
+    }
+    .gs_sidebar img {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+    .gs_catalog .wrapper {
+        gap: 24px;
+    }
+    .gs_catalog_minimenu li {
+        font-size: 14px;
+    }
+    .gs_catalog_minimenu span {
+        font-size: 14px;
+    }
+    .gs_catalog_cards_viewport .product_card {
+        max-width: 240px;
+    }
+    .gs_catalog_cards_viewport {
+        justify-content: space-between;
+        gap: 12px;
+    }
+    .paggination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .gs_catalog_2_slides {
+        margin-bottom: 120px;
+    }
+    .gs_catalog_2_slides .wrapper article {
+        min-height: 220px;
+    }
+    .slide_left, .slide_right {
+        position: relative;
+    }
+    .slide_left img, .slide_right img {
+        width: 450px;
+        height: 220px;
+    }
+    .slides_content img {
+        width: 16px;
+        height: 16px;
+    }
+    .slides_content h4 {
+        font-size: inherit;
+        letter-spacing: 0;
+        max-width: 144px;
+    }
+    .slides_content span {
+        max-width: 240px;
+        font-size: 12px;
+    }
+    .slides_content a {
+        font-family: 'cera_proregular';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 143%;
+        color: #fff;
+        background-color: #46a358;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        padding: 8px 20px;
+    }
+    .slide_left .slides_content, .slide_right .slides_content  {
+        position: absolute;
+        top: 52px;
+        right: 20px;
+    }
+    .blog_cards article img:first-of-type, .blog_cards article img:nth-child(2), .blog_cards article img:nth-child(3), .blog_cards article img:last-of-type {
+        width: 200px;
+    }
+    .read_more a:after {
+        display: inline-block;
+        content: "";
+        background-image: url(../img/svg/arrow_right_small_16_16.svg);
+        width: 16px;
+        height: 16px;
+    }
+    .blog_cards article div h4 {
+        font-size: 16px;
+        letter-spacing: 5%;
+    }
+    .blog_cards article div p {
+        font-size: 12px;
+    }
+    .upper_content_block {
+        padding: 0px 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .upper_content_block article {
+        min-width: 280px;
+        border-right: #46a35810 1px solid;
+        padding: 10px;
+    }
+    .upper_content_block article p {
+        font-size: 12px;
+        padding-right: 20px;
+    }
+    .middle_content_block {
+        gap: 0px;
+    }
+    .lower_content_block {
+        margin: 33px 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .lower_content_block article {
+        min-width: 295px;
+    }
+}
+/* === 992 PX END === */
+
+@media only screen and (max-width: 680px) {
+    header nav li {
+        margin-right: 4px;
+    }
+    header nav ul {
+        position: inherit;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .gs_banner .wrapper article h1 {
+        font-size: 48px;
+    }
+    .gs_banner .wrapper article h4 {
+        font-size: 10px;
+    }
+    .offer_desc {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    header nav ul {
+        display: none;
+    }
+}
