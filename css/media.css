@@ -175,6 +175,34 @@
 }
 /* === 992 PX END === */
 
+/* === 768 PX Start === */
+@media only screen and (max-width: 768px) {
+    .gs_catalog_2_slides .wrapper {
+        flex-direction: column;
+    }
+    .slide_left, .slide_right {
+        align-self: center;
+    }
+    .slide_left .slides_content, .slide_right .slides_content {
+        position: absolute;
+        top: 52px;
+        right: 30px;
+    }
+    .blog_cards {
+        display: flex;
+        justify-content: center;
+        gap: 44px;
+        flex-wrap: wrap;
+    }
+    .blog_cards article {
+        max-width: 300px;
+    }
+    .blog_cards article img:first-of-type, .blog_cards article img:nth-child(2), .blog_cards article img:nth-child(3), .blog_cards article img:last-of-type {
+        width: 100%;
+    }
+}
+/* === 768 PX END === */
+
 @media only screen and (max-width: 680px) {
     header nav li {
         margin-right: 4px;
